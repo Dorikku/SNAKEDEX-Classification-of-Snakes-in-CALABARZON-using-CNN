@@ -1,0 +1,90 @@
+{% extends "layout.html" %}
+
+{% block specific_css %}
+
+    <link rel="stylesheet" href="static/style2.css">
+
+{% endblock %}
+
+
+{% block title %}
+
+    Snake Index
+
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="header-title">
+        <p>SNAKEDEX</p>
+    </div>  
+
+{% endblock %}
+
+
+{% block body %}
+
+    {% if prediction %}
+    <div class="backbutton" onclick="jumptoHome()">
+        <i class='bx bx-arrow-back bx-sm'></i>
+    </div>
+    <script>
+        function jumptoHome() {
+            window.location.href = "/";
+        }
+    </script>
+    <center>
+        <div class="main-container">
+            <div class="prediction-container">
+                <div>
+                    <h1 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">PREDICTION</h1>
+                    <div>
+                        
+                        <img id="inputImg" src="{{ predict_path }}" alt="prediction image">
+                    </div>
+                    <h3>We found</h3> <h3 style="text-decoration: underline; color: maroon;">{{ prediction['name'] }} - {{ confidence }}%</h3> 
+                </div>
+            </div>
+            <div class="output-container">
+                <div>
+                    <h2 id="snakeName" class="snakeName">{{ prediction['name'] }}</h2>
+                    <h5 id="snakesciName" class="snakesciName">{{ prediction['sci-name'] }}</h5>
+                </div>
+                <div>
+                    <img class="snakeImg" src="{{ pokisnakes }}" alt="pokisnake">    
+                </div>
+                <div class="info">
+                    <div class="tabs">
+                        <input type="radio" class="tabs__radio" name="tabs-example" id="tab1" checked>
+                        <label for="tab1" class="tabs__label">About</label>
+                        <div class="tabs__content">
+                            <b style="color: maroon;">WARNING</b>
+                            <p> {{ prediction['warning'] }}</p>
+                            <p><b>Danger Level:</b> {{ prediction['danger'] }}</p>
+                            <p><b>Adult Length:</b> {{ prediction['adult_length'] }}</p>
+                            <p><b>Pupil Shape:</b> {{ prediction['pupil']}}</p>
+                            <p><b>Fang Type:</b> {{ prediction['fang'] }}</p>
+                            <p><b>Habitat:</b> {{ prediction['habitat'] }}</p>
+                        </div>
+                        <input type="radio" class="tabs__radio" name="tabs-example" id="tab2">
+                        <label for="tab2" class="tabs__label">Facts</label>
+                        <div class="tabs__content">
+                            <b style="color: maroon;">WARNING</b>
+                            <p> The bite of most elapids is not painful. You can be bitten and envenomated without noticing it.</p>
+                            <p><b>Superfamily: </b> <b style="font-style: italic;">Colubroidea</b> (Colubrids, elapids and vipers)</p>
+                            <p><b>Family: </b> <b style="font-style: italic;">Elapidae</b> (Elapids)</p>
+                            <p><b>Subfamily:</b> <b style="font-style: italic;">Incertae sedis</b></p>
+                            <p><b>Genus:</b> <b style="font-style: italic;">Hemibungarus</b> (Asian coral snakes)</p>
+                            <p><b>Species:</b> <b style="font-style: italic;">Hemibungarus calligaster</b> (Barred coral snakes)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </center>
+    
+
+    {% endif %}
+
+{% endblock %}

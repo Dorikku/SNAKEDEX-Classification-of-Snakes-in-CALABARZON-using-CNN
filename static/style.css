@@ -1,0 +1,140 @@
+body {
+    margin: 0;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: lighter;
+    width: 100%;
+    height: 100vh;
+}
+
+
+header {
+    margin: 0;
+    z-index: 0;
+    background-color: transparent;
+    padding: 15px 0;
+   
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 0px 16px; */
+}
+
+.bg-section {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    background-image: url(Snakedex\ \(3\).png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-blend-mode: lighten;
+    text-align: left;
+    justify-content: left;
+    /* animation: change 20s infinite ease-in-out; */
+}
+
+@keyframes change{
+
+    0%{
+        background-image: url(pitviperbg.jpg);
+    }
+    50%{
+        background-image: url(barredcoralbg.jpg);
+    }
+    100%{
+        background-image: url(flyingsnakebg.jpg);
+    }
+}
+
+.logo img {
+    height: 50px; 
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    float: right;
+    align-content: center;
+}
+
+li {
+    margin-right: 10px;
+}
+
+i {
+    font-size: 28px;
+}
+
+a {
+    text-decoration: none;
+    color: #f8f8f8;
+    font-weight: bold;
+    padding: 16px 16px;
+    margin: 3px 10px;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #d5d5d5; 
+}
+
+.mainlogo {
+    margin: 40px;
+    max-width: 100%;
+    width: 50%;
+    height: auto;
+    margin-bottom: -8%;
+    margin-left: 4%;
+    margin-top: -4%;
+}
+
+.description{
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 2%;
+    margin-left: 6%;
+    color: white;
+}
+
+.input-container{
+    max-width: 50%;
+    width: 15%;
+    height: auto;
+    justify-content: space-between;
+    background-color: #252932;
+    /* border: 1px solid #a9a9a9; */
+    display: flex;
+    color: white;  
+    border-radius: 20px;
+    padding: 5px;
+    margin-left: 6%;
+    cursor: pointer;
+}
+
+.input-container:hover{
+    background-color: #2e323d;  
+}
+
+.input-container input:focus, .input-container input:active {
+    outline: none;
+}
+
+.input-container p {
+    margin-left: 17%;
+    color: #ffffff;
+}
+
+#uploadIcon {
+    margin-top: 5%; 
+    margin-right: 15%;
+    color: #ffffff;
+}
+
+#hiddenFileInput {
+    display: none;
+}

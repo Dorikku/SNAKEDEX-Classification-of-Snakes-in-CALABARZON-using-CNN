@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block specific_css %}
+
+    <link rel="stylesheet" href="static/style.css">
+
+{% endblock %}
+
+
+{% block title %}
+
+    Snakedex - Snake Identifier in CALABARZON
+
+{% endblock %}
+
+
+{% block body %}
+
+
+
+    <div>
+        <img class="mainlogo" src="static/Header Logo v3.png" alt="Header Logo">
+    </div>
+    <div>
+        <p class="description">Snake identifier in CALABARZON</p>
+    </div>
+    
+    <div>
+        <form method="post" action="/predict" enctype="multipart/form-data">
+            <label for="image">Upload Snake Image:</label>
+            <input type="file" name="image" accept=".jpg, .jpeg, .png">
+            <button class="input-container" type="submit">Predict</button>
+        </form>
+    </div>
+
+
+    
+{% endblock %}

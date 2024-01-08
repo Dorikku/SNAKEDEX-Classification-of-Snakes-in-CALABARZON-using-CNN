@@ -1,0 +1,246 @@
+body {
+    margin: 0;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: lighter;
+    width: 100%;
+    height: 100vh;
+}
+
+
+header {
+    width: auto;
+    margin: 0;
+    z-index: 0;
+    background-color: transparent;
+    padding: 15px 0;
+   
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 0px 16px; */
+}
+
+.logo img {
+    height: 50px; 
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    float: right;
+    align-content: center;
+}
+
+li {
+    margin-right: 10px;
+}
+
+i {
+    font-size: 28px;
+}
+
+a {
+    text-decoration: none;
+    color: #2e323d;
+    font-weight: bold;
+    padding: 16px 16px;
+    margin: 3px 10px;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #687188; 
+}
+
+.header-title {
+    font-family: 'Blanka', sans-serif;
+    margin-left: 10%;
+}
+
+.main-container {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    
+}
+
+.prediction-container {
+    margin-top: 3%;
+    margin-left: 20%;
+    width: 350px; 
+    height: 400px;
+    background-color: transparent;
+    border-color: #53b1b1; 
+    border-style:solid;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    justify-content: center;
+    text-align: center;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+#inputImg {
+    width: 90%;
+    height: auto;
+}
+
+.output-container {
+    margin-right: 20%;
+    margin-bottom: 5%;
+    width: 350px; 
+    height: 550px;
+    background-color: #53b1b1; 
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    justify-content: center;
+    text-align: center;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.backbutton{
+    margin: 0;
+    margin-left: 15%;
+    max-width: 50%;
+    width: 1.8%;
+    height: auto;
+    justify-content: space-between;
+    display: flex;
+    background-color: #b3b7bf;
+    color: rgb(94, 94, 94);  
+    border-radius: 50%;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.backbutton:hover{
+    background-color: #ababad;  
+    opacity: 0.8;
+}
+
+.backbutton input:focus, .backbutton input:active {
+    outline: none;
+}
+
+.snakeName {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #fff;
+    margin-bottom: 0%;
+    margin-top: 5%;
+    margin-right: 30%;
+}
+
+.snakesciName {
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+    color: #d2d2d2;
+    margin-bottom: -2%;
+    margin-top: 1%;
+    margin-left: -40%;
+}
+
+.snakeImg {
+    z-index: 1; 
+    width: 85%;
+    height: auto;
+    margin-top: -10%;
+}
+
+.info {
+    z-index: 0;
+    width: 350px;
+    height: 300px;
+    background-color: #fff; 
+    border-radius: 20px;
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    bottom: 0%;
+}
+
+/* .tabs {
+    overflow: hidden;
+}
+
+.tab {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-family: 'Helvetica', sans-serif;
+    font-size: small;
+    width: 50%;
+    height: 50px;
+    color: #383838;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    float: left;
+    transition: border-bottom 0.3s ease;
+}
+
+.tab.active{
+    color: #000;
+    border-bottom: #3498db;
+}
+
+.section {
+    font-size: smaller;
+    width: 100%;
+    height: 300px;
+    background-color: #fff;
+    border-radius: 0 0 20px 20px;
+    position: absolute;
+    top: 50px;
+    display: none; 
+}
+
+.section.active {
+    display: block;
+}  */
+
+.tabs {
+    margin-top: 1%;
+    font-family: 'Helvetica', sans-serif;
+    font-size: small;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 400px;
+    font-family: sans-serif;
+    justify-content: space-evenly;
+}
+
+.tabs__label {
+    padding: 10px 16px;
+    cursor: pointer;
+}
+
+.tabs__radio {
+    display: none;
+}
+
+.tabs__content {
+    margin-top: 5%;
+    order: 1;
+    width: 100%;
+    line-height: 1.5;
+    font-size: 0.9em;
+    display: none;
+}
+
+.tabs__radio:checked + .tabs__label {
+    color: #53b1b1;
+    border-bottom: 2px solid #53b1b1;
+}
+
+.tabs__radio:checked + .tabs__label + .tabs__content {
+    display: initial;
+}
+  
+
