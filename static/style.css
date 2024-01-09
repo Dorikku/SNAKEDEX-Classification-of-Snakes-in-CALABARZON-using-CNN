@@ -103,15 +103,16 @@ a:hover {
 
 .input-container{
     max-width: 50%;
-    width: 15%;
+    width: 12vw;
     height: auto;
-    justify-content: space-between;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
     background-color: #252932;
-    /* border: 1px solid #a9a9a9; */
+    justify-content: space-evenly;
     display: flex;
     color: white;  
-    border-radius: 20px;
-    padding: 5px;
+    border-radius: 13px;
+    padding: 8px;
     margin-left: 6%;
     cursor: pointer;
 }
@@ -133,8 +134,4 @@ a:hover {
     margin-top: 5%; 
     margin-right: 15%;
     color: #ffffff;
-}
-
-#hiddenFileInput {
-    display: none;
 }

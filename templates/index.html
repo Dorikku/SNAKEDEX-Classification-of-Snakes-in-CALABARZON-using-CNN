@@ -26,12 +26,21 @@
     </div>
     
     <div>
-        <form method="post" action="/predict" enctype="multipart/form-data">
-            <label for="image">Upload Snake Image:</label>
-            <input type="file" name="image" accept=".jpg, .jpeg, .png">
-            <button class="input-container" type="submit">Predict</button>
+        <form id="myForm" method="post" action="/predict" enctype="multipart/form-data">
+            <label for="fileInput" class="input-container">
+                <i id="uploadIcon" class='bx bx-upload'></i>
+                Upload an Image
+            </label>
+            <input type="file" id="fileInput" name="file" style="display: none;" onchange="submitForm()">
         </form>
     </div>
+
+    <script>
+        function submitForm() {
+          // Automatically submits after uploading the file
+          document.getElementById('myForm').submit();
+        }
+    </script>
 
 
     
