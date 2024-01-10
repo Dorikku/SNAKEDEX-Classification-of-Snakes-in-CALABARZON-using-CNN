@@ -37,19 +37,6 @@ nav {
     /* animation: change 20s infinite ease-in-out; */
 }
 
-@keyframes change{
-
-    0%{
-        background-image: url(pitviperbg.jpg);
-    }
-    50%{
-        background-image: url(barredcoralbg.jpg);
-    }
-    100%{
-        background-image: url(flyingsnakebg.jpg);
-    }
-}
-
 .logo img {
     height: 50px; 
     margin-left: 50px;
@@ -131,7 +118,14 @@ a:hover {
 }
 
 #uploadIcon {
-    margin-top: 5%; 
-    margin-right: 15%;
     color: #ffffff;
+}
+
+.info {
+    margin-top: 3%;
+    margin-left: 6%;
+    width: 30vw;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    color: white;
 }

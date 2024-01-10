@@ -59,7 +59,6 @@ a:hover {
 
 .header-title {
     font-family: 'Blanka', sans-serif;
-    margin-left: 10%;
 }
 
 .main-container {
@@ -110,7 +109,7 @@ a:hover {
     margin: 0;
     margin-left: 15%;
     max-width: 50%;
-    width: 1.8%;
+    width: 1.5vw;
     height: auto;
     justify-content: space-between;
     display: flex;

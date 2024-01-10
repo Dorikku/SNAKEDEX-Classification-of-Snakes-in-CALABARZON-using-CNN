@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block specific_css %}
+    <link rel="stylesheet" href="static/null.css">
+{% endblock %}
+
+{% block title %}
+    Sorry, we couldn't find what you're looking for.
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="header-title">
+        <p>SNAKEDEX</p>
+    </div>  
+
+{% endblock %}
+
+{% block body %}
+
+    <center>
+        <div class="null-content">
+            <img src="static/Null Result Pixelated.png" alt="Null Result">
+            <div class="null-text">
+                Sorry, we couldn't find what you're looking for. <br>
+                Try again. <br><br>
+                <a style="text-decoration: underline;" href="/">Back to Homepage</a>
+            </div>
+        </div>
+    </center>
+
+{% endblock %}

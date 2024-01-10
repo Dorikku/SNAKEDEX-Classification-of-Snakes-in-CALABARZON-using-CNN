@@ -31,7 +31,7 @@
                 <i id="uploadIcon" class='bx bx-upload'></i>
                 Upload an Image
             </label>
-            <input type="file" id="fileInput" name="file" style="display: none;" onchange="submitForm()">
+            <input type="file" id="fileInput" name="image" accept=".jpg, .jpeg, .png" style="display: none;" onchange="submitForm()">
         </form>
     </div>
 
@@ -42,6 +42,10 @@
         }
     </script>
 
+    <div class="info">
+        <b style="font-size: 20px;">SNAKEDEX</b> uses machine learning to provide the best match for the snakes in your photo in 25 different snake species in CALABARZON region in the Philippines. <br><br>
+        Upload an image that you want to identify and we will provide the results. <br><br><br>
+    </div>
 
     
 {% endblock %}

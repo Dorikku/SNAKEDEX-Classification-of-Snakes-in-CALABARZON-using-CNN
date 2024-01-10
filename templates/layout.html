@@ -9,9 +9,52 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        .sidenav {
+            font-family: 'Poppins', sans-serif;
+            font-size: smaller;
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            right: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+        
+        .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 15px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+        }
+
+        .sidenav a:hover {
+        color: #f1f1f1;
+        }
+
+        .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+        }
+
+        @media screen and (max-height: 450px) {
+        .sidenav {padding-top: 15px;}
+        .sidenav a {font-size: 18px;}
+        }
+    </style>
     <title>
         {% block title %}{% endblock %}
     </title>
+    <link rel="icon" href="static/Snakedex Logo Icon.png" type="image/x-icon">
 </head>
 <body>
     <div class="bg-section">
@@ -25,12 +68,34 @@
                     <li><a href="/">
                         <i class='bx bx-home bx-sm'></i>
                     </a></li>
-                    <li><a href="#menu">
+                    <li><a href="#menu" onclick="openNav()">
                         <i class='bx bx-menu bx-sm' ></i>
-                    </a></li>       
+                    </a></li>         
                 </ul>
             </nav>
         </header>
+
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class='bx bx-x'></i></a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <div>
+                <a href=""><i class='bx bxl-facebook-circle'></i></a>
+                <a href=""><i class='bx bxl-instagram'></i></a>
+                <a href=""><i class='bx bxl-twitter' ></i></a>
+            </div>
+        </div>
+        
+          
+        <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+        
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+        </script>
         
         {% block body %}{% endblock %}
 
