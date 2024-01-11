@@ -398,4 +398,4 @@ snake24 = {
     "species" : "Ptyas luzonensis (Smooth Scaled Mountain Rat Snake)"
 }
 
-snakes = [snake0, snake1, snake2, snake3, snake4, snake5, snake14, snake7, snake9, snake10, snake12]
+snakes = [snake0, snake1, snake2, snake3, snake4, snake5, snake6, snake7, snake8, snake9, snake10, snake11, snake12, snake13, snake14, snake15, snake16, snake17, snake18, snake19, snake20, snake21, snake22, snake23, snake24]
