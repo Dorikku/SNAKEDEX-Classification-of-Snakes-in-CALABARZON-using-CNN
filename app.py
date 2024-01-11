@@ -25,6 +25,10 @@ def predict_disease(image_path):
     # Extract relevant information from the prediction
     # names_dict = results[0].names
     probs = results[0].boxes.data[:, 4:6].tolist()
+
+    if not probs:
+        return None, None 
+
     snake_index = int(probs[0][1])
     # prediction = names_dict[probs[0][1]]
     float_number = probs[0][0] * 100
@@ -47,9 +51,15 @@ def predict():
     file.save(image_path)
     # Pass the image to the YOLOv5 model for prediction
     prediction, confidence = predict_disease(image_path)
+
+    # Checks if there is no prediction created
+    if prediction is None:
+        return render_template('null.html')
+
     prediction_path = "static/predict/" + image_path
     pokisnakes_path = "static/pokisnakes/" + str(prediction) + '.png'
     snake_data = snakes[prediction]
+
     # Render the template with the prediction result
     return render_template('prediction.html', prediction=snake_data, confidence=confidence, predict_path=prediction_path, pokisnakes=pokisnakes_path)
 
