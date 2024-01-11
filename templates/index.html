@@ -16,7 +16,10 @@
 
 {% block body %}
 
-
+    <div id="loading-screen">
+        <div class="loader"></div>
+        <p style="font-family: 'Poppins', sans-serif;">Predicting...</p>
+    </div>
 
     <div>
         <img class="mainlogo" src="static/Header Logo v3.png" alt="Header Logo">
@@ -39,6 +42,12 @@
         function submitForm() {
           // Automatically submits after uploading the file
           document.getElementById('myForm').submit();
+          showLoadingScreen();
+        }
+
+        function showLoadingScreen() {
+            const loadingScreen = document.getElementById('loading-screen');
+            loadingScreen.style.display = 'flex';
         }
     </script>
 
