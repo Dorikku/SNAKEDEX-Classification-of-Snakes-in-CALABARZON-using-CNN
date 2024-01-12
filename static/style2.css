@@ -213,6 +213,7 @@ a:hover {
     max-width: 400px;
     font-family: sans-serif;
     justify-content: space-evenly;
+    overflow: hidden;
 }
 
 .tabs__label {
