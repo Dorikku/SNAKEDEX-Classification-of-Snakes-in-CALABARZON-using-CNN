@@ -8,7 +8,7 @@ from database import snakes
 app = Flask(__name__)
 
 def predict_disease(image_path):
-    # Load the YOLOv5 model
+    # Load the YOLOv8 model
     model = YOLO('best.pt')
 
     # Read and resize the input image using Pillow (PIL)
@@ -41,12 +41,16 @@ def predict_disease(image_path):
 def home():
     return render_template('index.html', prediction=None)
 
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
 @app.route('/predict', methods=['POST'])
 def predict():
     # Get the image file from the request
     file = request.files['image']
 
-    # Save the file temporarily (optional)
+    # Save the file temporarily
     image_path = 'temp_image.jpg'
     file.save(image_path)
     # Pass the image to the YOLOv5 model for prediction

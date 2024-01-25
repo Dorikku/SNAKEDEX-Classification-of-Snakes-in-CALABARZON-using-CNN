@@ -1,3 +1,4 @@
+<!-- Get layout from layout html using jinja syntax -->
 {% extends "layout.html" %}
 
 {% block specific_css %}
@@ -29,6 +30,7 @@
     </div>
     
     <div>
+        <!-- get image from user -->
         <form id="myForm" method="post" action="/predict" enctype="multipart/form-data">
             <label for="fileInput" class="input-container">
                 <i id="uploadIcon" class='bx bx-upload'></i>
@@ -38,6 +40,7 @@
         </form>
     </div>
 
+    <!-- handle automatic submit button -->
     <script>
         function submitForm() {
           // Automatically submits after uploading the file
@@ -51,6 +54,7 @@
         }
     </script>
 
+    <!-- Display info -->
     <div class="info">
         <b style="font-size: 20px;">SNAKEDEX</b> uses machine learning to provide the best match for the snakes in your photo in 25 different snake species in CALABARZON region in the Philippines. <br><br>
         Upload an image that you want to identify and we will provide the results. <br><br><br>

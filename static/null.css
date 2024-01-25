@@ -107,3 +107,146 @@ a:hover {
 @media (max-width: 1440px) {
     .null-image, .null-text{width: 25%;}
 }
+
+
+/* Footer Design start*/
+footer{
+    
+    background: #111;
+    height: auto;
+    width: 100vw;
+    font-family: 'Poppins', sans-serif;
+    padding-top: 40px;
+    color: #ffffff;
+}
+
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+
+.socials li{
+    margin: 0 10px;
+}
+
+.socials a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.socials a i{
+    font-size: 1.1rem;
+    transition: color .4s ease;
+}
+
+.socials a:hover i{
+    color: rgb(129,146,47);
+}
+
+.footer-bottom{
+    background: #000;
+    width: 100vw;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-bottom p{
+    text-transform: uppercase;
+    word-spacing: 2px;
+    
+}
+
+.footer-bottom span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
+
+.columns {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 5px 0;
+}
+
+.column {
+    flex: 1;
+    margin: 2px;
+    padding: 10px;
+}
+
+.column:first-child {
+    margin-left: 0;
+}
+
+.column:first-child {
+    margin-left: 0;
+}
+
+
+@media only screen and (max-width: 600px) {
+    body {
+        padding: 5px;
+    }
+
+    .logo img {
+        margin-left: 3px;
+        margin-right: 3px;
+    }
+
+    .teamcontainer {
+        padding: 20px 5px;
+    }
+
+    .header-title {
+        margin-left: 0;
+        margin-right: 0;
+        font-size: 16px;
+    }
+
+    .abouttext {
+        padding: 15px 5px;
+    }
+
+
+    @media screen and (max-width: 980px){
+        .columns .column{
+            margin-bottom: 5px;
+            flex-basis: 40%
+        }
+        .columns .column:last-child{
+            flex-basis: 100%;
+            margin: 0;
+        }
+        .columns .column{
+            margin-right: 0;
+        }
+    }
+    
+    @media screen and (max-width: 680px){
+        .columns .column{
+            flex-basis: 100%;
+            margin: 0 0 5px 0;
+        }
+    }
+    
+}

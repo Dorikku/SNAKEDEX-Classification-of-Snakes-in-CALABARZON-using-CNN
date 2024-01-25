@@ -28,9 +28,11 @@ nav {
     overflow: hidden;
     position: relative;
     background-image: url(Snakedex\ \(3\).png);
+    object-fit: cover;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 100%;
+    /* background-size: 100%; */
     background-blend-mode: lighten;
     text-align: left;
     justify-content: left;
@@ -155,4 +157,249 @@ a:hover {
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+/* Media Query for max-width: 600px */
+@media (max-width: 1000px) {
+    .logo img {
+        height: 30px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    ul {
+        float: none;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .mainlogo {
+        width: 80%;
+        margin: 20px;
+        margin-bottom: -8%;
+        margin-left: 10%;
+        margin-top: -4%;
+    }
+
+    .description {
+        margin-left: 10%;
+    }
+
+    .input-container {
+        max-width: 80%;
+        width: 70%;
+        margin-left: 10%;
+    }
+
+    .bg-section {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background-image: url(Snakedex3.jpg);
+        background-repeat: no-repeat;
+        object-fit: cover;
+        /* background-size: cover; */
+        background-blend-mode: lighten;
+        text-align: left;
+        /* animation: change 20s infinite ease-in-out; */
+    }
+        /* justify-content: left; */
+}
+
+/* Media Query for max-width: 768px */
+@media (max-width: 768px) {
+    .mainlogo {
+        width: 70%;
+    }
+
+    .description {
+        margin-left: 8%;
+    }
+}
+
+/* Media Query for max-width: 1280px */
+@media (max-width: 1280px) {
+    /* Add styles as needed for this breakpoint */
+}
+
+/* Common styles for all breakpoints */
+.logo img {
+    height: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    float: right;
+    align-content: center;
+}
+
+li {
+    margin-right: 10px;
+}
+
+i {
+    font-size: 28px;
+}
+
+a {
+    text-decoration: none;
+    color: #f8f8f8;
+    font-weight: bold;
+    padding: 16px 16px;
+    margin: 3px 10px;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #d5d5d5;
+}
+
+/* Footer Design start*/
+footer{
+    
+    background: #111;
+    height: auto;
+    width: 100vw;
+    font-family: 'Poppins', sans-serif;
+    padding-top: 40px;
+    color: #ffffff;
+}
+
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+
+.socials li{
+    margin: 0 10px;
+}
+
+.socials a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.socials a i{
+    font-size: 1.1rem;
+    transition: color .4s ease;
+}
+
+.socials a:hover i{
+    color: rgb(129,146,47);
+}
+
+.footer-bottom{
+    background: #000;
+    width: 100vw;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-bottom p{
+    text-transform: uppercase;
+    word-spacing: 2px;
+    
+}
+
+.footer-bottom span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
+
+.columns {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 5px 0;
+}
+
+.column {
+    flex: 1;
+    margin: 2px;
+    padding: 10px;
+}
+
+.column:first-child {
+    margin-left: 0;
+}
+
+.column:first-child {
+    margin-left: 0;
+}
+
+
+@media only screen and (max-width: 600px) {
+    body {
+        padding: 5px;
+    }
+
+    .logo img {
+        margin-left: 3px;
+        margin-right: 3px;
+    }
+
+    .teamcontainer {
+        padding: 20px 5px;
+    }
+
+    .header-title {
+        margin-left: 0;
+        margin-right: 0;
+        font-size: 16px;
+    }
+
+    .abouttext {
+        padding: 15px 5px;
+    }
+
+
+    @media screen and (max-width: 980px){
+        .columns .column{
+            margin-bottom: 5px;
+            flex-basis: 40%
+        }
+        .columns .column:last-child{
+            flex-basis: 100%;
+            margin: 0;
+        }
+        .columns .column{
+            margin-right: 0;
+        }
+    }
+    
+    @media screen and (max-width: 680px){
+        .columns .column{
+            flex-basis: 100%;
+            margin: 0 0 5px 0;
+        }
+    }
+    
 }
