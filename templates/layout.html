@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    
     <style>
         .sidenav {
             font-family: 'Poppins', sans-serif;
@@ -26,41 +27,42 @@
         }
         
         .sidenav a {
-        padding: 8px 8px 8px 32px;
-        text-decoration: none;
-        font-size: 15px;
-        color: #818181;
-        display: block;
-        transition: 0.3s;
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 15px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
         }
 
         .sidenav a:hover {
-        color: #f1f1f1;
+            color: #f1f1f1;
         }
 
         .sidenav .closebtn {
-        position: absolute;
-        top: 0;
-        right: 25px;
-        font-size: 36px;
-        margin-left: 50px;
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
         }
 
         @media screen and (max-height: 450px) {
-        .sidenav {padding-top: 15px;}
-        .sidenav a {font-size: 18px;}
+            .sidenav {padding-top: 15px;}
+            .sidenav a {font-size: 18px;}
         }
     </style>
+
     <title>
         {% block title %}{% endblock %}
     </title>
-    <link rel="icon" href="static/Snakedex Logo Icon.png" type="image/x-icon">
+    <link rel="icon" type="image/x-icon" href="static/Snakedex Logo Icon.ico">
 </head>
 <body>
     <div class="bg-section">
         <header>
             <nav>
-                <div class="logo">
+                <div class="logo" onclick="gotoHomePage()">
                     <img src="static/Snakedex Logo.png" alt="Website Logo">
                 </div>
                 {% block content %}{% endblock %}
@@ -87,52 +89,52 @@
         
           
         <script>
-        function openNav() {
-            document.getElementById("mySidenav").style.width = "250px";
-        }
-        
-        function closeNav() {
-            document.getElementById("mySidenav").style.width = "0";
-        }
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+            }
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+            }
+            function gotoHomePage() {
+                window.location.href = '/';
+            }
         </script>
         
         {% block body %}{% endblock %}
 
     </div>
 
+    <footer>
+        <div class="footer-content">
+            <section class="columns">
+                <div class="column">
+                    <h2>POWERED BY YOLOV8</h2>
+                    <p>Uses newest state-of-the-art YOLO model in object detection, image classification, and instance segmentation tasks. </p>
+                </div>
+                <div class="column">
+                    <h2>HIGH ACCURACY</h2>
+                    <p>Predicts with confidence, providing you accurate information about the species.</p>
+                </div>
+                <div class="column">
+                    <h2>GET IN TOUCH</h2>
+                    <p>Feel free to reach out to us with any inquiries or concerns, and we'll gladly help you whenever you need assistance.</p>
+                </div>
+            </section>
+            <ul class="socials">
+                <li><a href="https://www.facebook.com/tahmwellrups"><i class='bx bxl-facebook-circle'></i></a></li>
+                <li><a href="https://twitter.com/drix_nifas"><i class='bx bxl-twitter'></i></a></li>
+                <li><a href="https://github.com/Dorikku/SNAKEDEX-Classification-of-Snakes-in-CALABARZON-using-CNN.git"><i   class='bx bxl-github'></i></a></li>
+                <li><a href="https://www.youtube.com/channel/UCHlOjcleCEJ8wgEJtG3nkkw"><i class='bx bxl-youtube'></i></a></li>
+                <li><a href="https://www.linkedin.com/in/micko-james-arellano-a040b7274/"><i class='bx bxl-linkedin-square' ></i></i></a></li>
+            </ul>
+        </div>
 
-<!-- Footer Area start-->
-<footer>
-    <div class="footer-content">
-        <section class="columns">
-            <div class="column">
-                <h2>POWERED BY YOLOV8</h2>
-                <p>Uses newest state-of-the-art YOLO model in object detection, image classification, and instance segmentation tasks. </p>
-            </div>
-            <div class="column">
-                <h2>HIGH ACCURACY</h2>
-                <p>Predicts with confidence, providing you accurate information about the species.</p>
-            </div>
-            <div class="column">
-                <h2>GET IN TOUCH</h2>
-                <p>Feel free to reach out to us with any inquiries or concerns, and we'll gladly help you whenever you need assistance.</p>
-            </div>
-        </section>
-        <ul class="socials">
-            <li><a href="https://www.facebook.com/tahmwellrups"><i class='bx bxl-facebook-circle'></i></a></li>
-            <li><a href="https://twitter.com/drix_nifas"><i class='bx bxl-twitter'></i></a></li>
-            <li><a href="https://github.com/Dorikku/SNAKEDEX-Classification-of-Snakes-in-CALABARZON-using-CNN.git"><i   class='bx bxl-github'></i></a></li>
-            <li><a href="https://www.youtube.com/channel/UCHlOjcleCEJ8wgEJtG3nkkw"><i class='bx bxl-youtube'></i></a></li>
-            <li><a href="https://www.linkedin.com/in/micko-james-arellano-a040b7274/"><i class='bx bxl-linkedin-square' ></i></i></a></li>
-        </ul>
-    </div>
+        <div class="footer-bottom">
+            <p>copyright &copy;2024 Snakedex. designed by <span>Team Hakao-san</span></p>
 
-    <div class="footer-bottom">
-        <p>copyright &copy;2024 Snakedex. designed by <span>Team Hakao-san</span></p>
+        </div>
 
-    </div>
+    </footer>
 
-</footer>
-<!-- Footer Area end-->
 </body>
 </html>

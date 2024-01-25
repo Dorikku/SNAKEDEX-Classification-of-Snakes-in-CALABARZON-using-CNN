@@ -1,6 +1,49 @@
+.sidenav {
+    font-family: 'Poppins', sans-serif;
+    font-size: smaller;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+padding: 8px 8px 8px 32px;
+text-decoration: none;
+font-size: 15px;
+color: #818181;
+display: block;
+transition: 0.3s;
+}
+
+.sidenav a:hover {
+color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+position: absolute;
+top: 0;
+right: 25px;
+font-size: 36px;
+margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+.sidenav {padding-top: 15px;}
+.sidenav a {font-size: 18px;}
+} 
+
+
 body {
     margin: 0;
-    font-family: 'poppins', 'sans serif';
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
     font-weight: lighter;
     width: 100%;
     height: 100vh;
@@ -8,7 +51,6 @@ body {
 
 
 header {
-    width: auto;
     margin: 0;
     z-index: 0;
     background-color: transparent;
@@ -23,8 +65,55 @@ nav {
     /* padding: 0px 16px; */
 }
 
+.logo {
+    cursor: pointer;
+}
+
+.logo input:focus, .logo input:active {
+    outline: none;
+}
+
+.logo img {
+    height: 50px; 
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    float: right;
+    align-content: center;
+}
+
+li {
+    margin-right: 10px;
+}
+
+i {
+    font-size: 28px;
+}
+
+a {
+    text-decoration: none;
+    color: #f8f8f8;
+    font-weight: bold;
+    padding: 16px 16px;
+    margin: 3px 10px;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #d5d5d5; 
+}
+
+.header-title {
+    font-family: 'Blanka', sans-serif;
+    margin-left: 10%;
+}
+
 .bg-section {
-    width: 100%;
+    width: 100vw;
     height: 100%;
     overflow: hidden;
     position: relative;
@@ -80,27 +169,27 @@ td{
     max-width: 100%;
 }
 
-.scroll{
-    /* width */
+/* .scroll{
+
     ::-webkit-scrollbar {
     width: 10px;
   }
   
-  /* Track */
+  
   ::-webkit-scrollbar-track {
     background: #f1f1f1; 
   }
    
-  /* Handle */
+  
   ::-webkit-scrollbar-thumb {
     background: #888; 
   }
   
-  /* Handle on hover */
+  
   ::-webkit-scrollbar-thumb:hover {
     background: #555; 
   }
-}
+} */
 
 hr{
     color: black;
@@ -140,10 +229,10 @@ a:hover {
 
 /* Footer Design start*/
 footer{
-    
+    margin: 0;
     background: #111;
     height: auto;
-    width: 100vw;
+    width: 100%;
     font-family: 'Poppins', sans-serif;
     padding-top: 40px;
     color: #ffffff;
@@ -193,7 +282,7 @@ footer{
 
 .footer-bottom{
     background: #000;
-    width: 100vw;
+    width: 100%;
     padding: 20px 0;
     text-align: center;
 }

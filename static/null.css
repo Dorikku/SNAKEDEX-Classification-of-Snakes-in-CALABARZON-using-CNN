@@ -23,6 +23,14 @@ nav {
     /* padding: 0px 16px; */
 }
 
+.logo {
+    cursor: pointer;
+}
+
+.logo input:focus, .logo input:active {
+    outline: none;
+}
+
 .logo img {
     height: 50px; 
     margin-left: 50px;
@@ -111,10 +119,10 @@ a:hover {
 
 /* Footer Design start*/
 footer{
-    
+    margin-top: 10%;
     background: #111;
     height: auto;
-    width: 100vw;
+    width: 100%;
     font-family: 'Poppins', sans-serif;
     padding-top: 40px;
     color: #ffffff;
@@ -164,7 +172,7 @@ footer{
 
 .footer-bottom{
     background: #000;
-    width: 100vw;
+    width: 100%;
     padding: 20px 0;
     text-align: center;
 }

@@ -1,74 +1,138 @@
-{% extends "layout.html" %}
+<!DOCTYPE html>
 
-{% block specific_css %}
-
+<html lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="static/style3.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.cdnfonts.com/css/blanka" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <title>Snake Index</title>
+    <link rel="icon" type="image/x-icon" href="static/Snakedex Logo Icon.png">
+</head>
 
-{% endblock %}
+<body>
+    <div>
+        <header>
+            <nav>
+                <div class="logo" onclick="gotoHomePage()">
+                    <img src="static/Snakedex Logo.png" alt="Website Logo">
+                </div>
+                <ul>
+                    <li><a href="/">
+                        <i class='bx bx-home bx-sm'></i>
+                    </a></li>
+                    <li><a href="#menu" onclick="openNav()">
+                        <i class='bx bx-menu bx-sm' ></i>
+                    </a></li>         
+                </ul>
+            </nav>
+        </header>
 
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class='bx bx-x'></i></a>
+            <a href="/about">About</a>
+            <div>
+                <a href="https://www.facebook.com/tahmwellrups"><i class='bx bxl-facebook-circle'></i></a>
+                <a href="https://www.instagram.com/hendrix_nifas/"><i class='bx bxl-instagram'></i></a>
+                <a href="https://twitter.com/drix_nifas"><i class='bx bxl-twitter' ></i></a>
+            </div>
+        </div>
+        
+            
+        <script>
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+            }
+            
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+            }
+            function gotoHomePage() {
+                window.location.href = '/';
+            }
+        </script>
+        
+        <div>
+            <center>
+                <h2>About</h2>
+            </center>
+        </div>
+        <div class="abouttext">
+            <center>
+                <p>We are students of the Technological University of the Philippines.
+                    <br>
+                    <br>
+                    Our project was inspired by the creators of the "Pokédex," who are fellow students from our school. 
+                    Our system is intended for people navigating urban areas where different snake species can be encountered. 
+                    We welcome any suggestions you may have, as we're working to make our system available in mobile offline mode for added convenience. 
+                    Your input is important to us as we continue to improve our system.
+                </p>    
+            </center>   
+        </div>
 
-{% block title %}
-
-   About Makers
-
-{% endblock %}
-
-{% block content %}
-
-    <div class="header-title">
-        <p>SNAKEDEX</p>
-    </div>  
-
-{% endblock %}
-
-{% block body %}
-
-            <div class="header-title">
-                <p>SNAKEDEX</p>
-            </div> 
+        <div class="teamcontainer">
             <div>
                 <center>
-                    <h2>About</h2>
+                    <img class="teampic" style="box-shadow: 2px 2px 4px;;" src="static/team.png" alt="Team Photo">
+                </center>
+                    
+            </div>
+            <div class="tabledes">
+                <center>
+                    <table>
+                        <tbody><tr>
+                            <td><center><h4>Micko James D. Arellano</h4></center></td>
+                            <td><center><h4>Ramwell P. Tupas</h4></center></td>
+                            <td><center><h4>Hendrickson R. Nifas</h4></center></td>
+                            <td><center><h4>Tristan Jay H. Fernandez</h4></center></td>
+                        </tr>
+                        <tr>
+                            <td><center>Member</center></td>
+                            <td><center>Group Leader</center></td>
+                            <td><center>Member</center></td>
+                            <td><center>Member</center></td>
+                        </tr>
+                    </tbody></table>
                 </center>
             </div>
-            <div class="abouttext">
-                <center>
-                    <p>We are students of the Technological University of the Philippines.
-                        <br>
-                        <br>
-                        Our project was inspired by the creators of the "Pokédex," who are fellow students from our school. 
-                        Our system is intended for people navigating urban areas where different snake species can be encountered. 
-                        We welcome any suggestions you may have, as we're working to make our system available in mobile offline mode for added convenience. 
-                        Your input is important to us as we continue to improve our system.
-                    </p>    
-                </center>   
-            </div>
+        </div>
 
-            <div class="teamcontainer">
-                <div>
-                    <center>
-                        <img class="teampic" style="box-shadow: 2px 2px 4px;;" src="static/team.png" alt="Team Photo">
-                    </center>
-                        
-                </div>
-                <div class="tabledes">
-                    <center>
-                        <table>
-                            <tr>
-                                <td><center><h4>Micko James D. Arellano</h4></center></td>
-                                <td><center><h4>Ramwell P. Tupas</h4></center></td>
-                                <td><center><h4>Hendrickson R. Nifas</h4></center></td>
-                                <td><center><h4>Tristan Jay H. Fernandez</h4></center></td>
-                            </tr>
-                            <tr>
-                                <td><center>Member</center></td>
-                                <td><center>Group Leader</center></td>
-                                <td><center>Member</center></td>
-                                <td><center>Member</center></td>
-                            </tr>
-                        </table>
-                    </center>
-                </div>
-            </div>
+    </div>
+
     
-{% endblock %}
+
+    <footer>
+        <div class="footer-content">
+            <section class="columns">
+                <div class="column">
+                    <h2>POWERED BY YOLOV8</h2>
+                    <p>Uses newest state-of-the-art YOLO model in object detection, image classification, and instance segmentation tasks. </p>
+                </div>
+                <div class="column">
+                    <h2>HIGH ACCURACY</h2>
+                    <p>Predicts with confidence, providing you accurate information about the species.</p>
+                </div>
+                <div class="column">
+                    <h2>GET IN TOUCH</h2>
+                    <p>Feel free to reach out to us with any inquiries or concerns, and we'll gladly help you whenever you need assistance.</p>
+                </div>
+            </section>
+            <ul class="socials">
+                <li><a href="https://www.facebook.com/tahmwellrups"><i class="bx bxl-facebook-circle"></i></a></li>
+                <li><a href="https://twitter.com/drix_nifas"><i class="bx bxl-twitter"></i></a></li>
+                <li><a href="https://github.com/Dorikku/SNAKEDEX-Classification-of-Snakes-in-CALABARZON-using-CNN.git"><i class="bx bxl-github"></i></a></li>
+                <li><a href="https://www.youtube.com/channel/UCHlOjcleCEJ8wgEJtG3nkkw"><i class="bx bxl-youtube"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/micko-james-arellano-a040b7274/"><i class="bx bxl-linkedin-square"></i></a></li>
+            </ul>
+        </div>
+
+        <div class="footer-bottom">
+            <p>copyright ©2024 Snakedex. designed by <span>Team Hakao-san</span></p>
+
+        </div>
+    </footer>
+<!-- Footer Area end-->
+</body>
